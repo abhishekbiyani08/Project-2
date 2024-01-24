@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="contact">Contact Us</h2>
+        <form id="contactForm" onsubmit="validateForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <div id="captchaContainer">
+                <span id="captchaText">Enter the captcha:</span>
+                <input type="text" id="captchaInput" name="captcha" required>
+                <span id="captcha" onclick="generateCaptcha()">Loading...</span>
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
